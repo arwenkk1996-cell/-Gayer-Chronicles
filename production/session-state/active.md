@@ -1,9 +1,9 @@
 # Session State — Gaia Chronicles
 
 <!-- STATUS -->
-Epic: Project Setup
-Feature: Concept & Engine Configuration
-Task: Complete — ready for /map-systems
+Epic: Concept Phase
+Feature: Systems Decomposition
+Task: Complete — ready for /design-system narrative-state-machine
 <!-- /STATUS -->
 
 ## Current Phase
