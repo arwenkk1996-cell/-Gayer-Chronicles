@@ -29,11 +29,11 @@ exist in service of curiosity, discovery, and choice. The core loop is:
 | 5 | Character Controller | Core | MVP | Designed | design/gdd/character-controller.md | — |
 | 6 | Camera System | Core | MVP | Designed | design/gdd/camera-system.md | Character Controller |
 | 7 | Save / Load System | Persistence | MVP | Designed | design/gdd/save-load-system.md | Narrative State Machine |
-| 8 | Dialogue System | Narrative | Vertical Slice | Not Started | — | Interaction System, Narrative State Machine |
-| 9 | Puzzle System | Gameplay | Vertical Slice | Not Started | — | Memory Fragment System, Interaction System |
-| 10 | Journal / Chronicle System | Narrative | Vertical Slice | Not Started | — | Memory Fragment System, Dialogue System, Artifact System |
-| 11 | HUD / UI System | UI | Vertical Slice | Not Started | — | All gameplay systems |
-| 12 | Audio System | Audio | Vertical Slice | Not Started | — | Visual Transition System |
+| 8 | Dialogue System | Narrative | Vertical Slice | Designed | design/gdd/dialogue-system.md | Interaction System, Narrative State Machine |
+| 9 | Puzzle System | Gameplay | Vertical Slice | Designed | design/gdd/puzzle-system.md | Memory Fragment System, Interaction System |
+| 10 | Journal / Chronicle System | Narrative | Vertical Slice | Designed | design/gdd/journal-chronicle-system.md | Memory Fragment System, Dialogue System, Artifact System |
+| 11 | HUD / UI System | UI | Vertical Slice | Designed | design/gdd/hud-ui-system.md | All gameplay systems |
+| 12 | Audio System | Audio | Vertical Slice | Designed | design/gdd/audio-system.md | Visual Transition System |
 | 13 | NPC AI System (inferred) | Gameplay | Alpha | Not Started | — | Character Controller, Dialogue System |
 | 14 | Artifact / Item System (inferred) | Gameplay | Alpha | Not Started | — | Interaction System, Narrative State Machine |
 | 15 | World Map System (inferred) | UI | Alpha | Not Started | — | Narrative State Machine, Level Streaming |
@@ -153,18 +153,25 @@ exist in service of curiosity, discovery, and choice. The core loop is:
 | Metric | Count |
 |--------|-------|
 | Total systems identified | 18 |
-| Design docs started | 7 |
+| Design docs started | 12 |
 | Design docs reviewed | 0 |
 | Design docs approved | 0 |
 | MVP systems designed | 7 / 7 |
-| Vertical Slice systems designed | 0 / 5 |
+| Vertical Slice systems designed | 5 / 5 |
 
 ---
 
 ## Next Steps
 
-- [ ] `/design-system narrative-state-machine` — first and most critical GDD
-- [ ] `/design-system memory-fragment-system` — prototype candidate (high-risk, design early)
-- [ ] `/prototype memory-fragment-transition` — validate the core mechanic before building anything else
-- [ ] Run `/design-review` on each completed GDD
-- [ ] Run `/gate-check pre-production` when all 7 MVP GDDs are approved
+- [x] Phase 1 complete — all 12 concept GDDs written (7 MVP + 5 Vertical Slice)
+- [ ] **Phase 2: Architecture** — `/create-architecture` + 5 ADRs
+  - ADR-001: NSM implementation (UGameInstanceSubsystem)
+  - ADR-002: Dialogue middleware (Yarn Spinner UE5.7 compatibility)
+  - ADR-003: Memory Fragment level loading (Level Instance vs World Partition)
+  - ADR-004: Save slot strategy
+  - ADR-005: Character hair (Groom vs static mesh)
+- [ ] `/create-control-manifest` — compile ADR decisions into programmer rules sheet
+- [ ] **Phase 3: UX** — `/ux-design` for Main Menu, Journal Interface, HUD
+- [ ] **Phase 3: Prototype** — `/prototype memory-fragment-transition` (highest-risk)
+- [ ] Run `/review-all-gdds` for cross-consistency check (12 GDDs)
+- [ ] Run `/gate-check pre-production` when all GDDs reviewed
