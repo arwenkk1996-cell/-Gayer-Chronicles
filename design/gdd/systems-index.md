@@ -22,8 +22,8 @@ exist in service of curiosity, discovery, and choice. The core loop is:
 
 | # | System Name | Category | Priority | Status | Design Doc | Depends On |
 |---|-------------|----------|----------|--------|------------|------------|
-| 1 | Narrative State Machine | Core | MVP | Not Started | — | — |
-| 2 | Exploration / Interaction System | Gameplay | MVP | Not Started | — | Narrative State Machine, Character Controller |
+| 1 | Narrative State Machine | Core | MVP | Designed | design/gdd/narrative-state-machine.md | — |
+| 2 | Exploration / Interaction System | Gameplay | MVP | Designed | design/gdd/exploration-interaction-system.md | Narrative State Machine, Character Controller |
 | 3 | Memory Fragment System | Gameplay | MVP | Not Started | — | Interaction System, Visual Transition System, Narrative State Machine |
 | 4 | Visual Transition System | Core | MVP | Not Started | — | Narrative State Machine |
 | 5 | Character Controller | Core | MVP | Not Started | — | — |
@@ -153,10 +153,10 @@ exist in service of curiosity, discovery, and choice. The core loop is:
 | Metric | Count |
 |--------|-------|
 | Total systems identified | 18 |
-| Design docs started | 0 |
+| Design docs started | 2 |
 | Design docs reviewed | 0 |
 | Design docs approved | 0 |
-| MVP systems designed | 0 / 7 |
+| MVP systems designed | 2 / 7 |
 | Vertical Slice systems designed | 0 / 5 |
 
 ---
