@@ -24,11 +24,11 @@ exist in service of curiosity, discovery, and choice. The core loop is:
 |---|-------------|----------|----------|--------|------------|------------|
 | 1 | Narrative State Machine | Core | MVP | Designed | design/gdd/narrative-state-machine.md | — |
 | 2 | Exploration / Interaction System | Gameplay | MVP | Designed | design/gdd/exploration-interaction-system.md | Narrative State Machine, Character Controller |
-| 3 | Memory Fragment System | Gameplay | MVP | Not Started | — | Interaction System, Visual Transition System, Narrative State Machine |
-| 4 | Visual Transition System | Core | MVP | Not Started | — | Narrative State Machine |
-| 5 | Character Controller | Core | MVP | Not Started | — | — |
-| 6 | Camera System | Core | MVP | Not Started | — | Character Controller |
-| 7 | Save / Load System | Persistence | MVP | Not Started | — | Narrative State Machine |
+| 3 | Memory Fragment System | Gameplay | MVP | Designed | design/gdd/memory-fragment-system.md | Interaction System, Visual Transition System, Narrative State Machine |
+| 4 | Visual Transition System | Core | MVP | Designed | design/gdd/visual-transition-system.md | Narrative State Machine |
+| 5 | Character Controller | Core | MVP | Designed | design/gdd/character-controller.md | — |
+| 6 | Camera System | Core | MVP | Designed | design/gdd/camera-system.md | Character Controller |
+| 7 | Save / Load System | Persistence | MVP | Designed | design/gdd/save-load-system.md | Narrative State Machine |
 | 8 | Dialogue System | Narrative | Vertical Slice | Not Started | — | Interaction System, Narrative State Machine |
 | 9 | Puzzle System | Gameplay | Vertical Slice | Not Started | — | Memory Fragment System, Interaction System |
 | 10 | Journal / Chronicle System | Narrative | Vertical Slice | Not Started | — | Memory Fragment System, Dialogue System, Artifact System |
@@ -153,10 +153,10 @@ exist in service of curiosity, discovery, and choice. The core loop is:
 | Metric | Count |
 |--------|-------|
 | Total systems identified | 18 |
-| Design docs started | 2 |
+| Design docs started | 7 |
 | Design docs reviewed | 0 |
 | Design docs approved | 0 |
-| MVP systems designed | 2 / 7 |
+| MVP systems designed | 7 / 7 |
 | Vertical Slice systems designed | 0 / 5 |
 
 ---
