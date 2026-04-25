@@ -1,6 +1,6 @@
 # ADR-004: Save Slot Strategy — Single Auto-Save Slot with Version Guard
 
-**Status:** Accepted
+**Status:** Superseded — 引擎迁移至 Godot 4 (2026-04-25)
 **Date:** 2026-04-25
 **Author:** Claude Code (technical-director)
 

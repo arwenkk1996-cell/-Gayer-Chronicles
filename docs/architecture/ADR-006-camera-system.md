@@ -1,6 +1,6 @@
 # ADR-006: Camera System — USpringArmComponent + UCameraComponent
 
-**Status:** Accepted
+**Status:** Superseded — 引擎迁移至 Godot 4 (2026-04-25)
 **Date:** 2026-04-25
 **Author:** Claude Code (technical-director)
 

@@ -1,6 +1,6 @@
 # ADR-002: Dialogue Middleware — Yarn Spinner for Unreal (with UE5.7 Compatibility Note)
 
-**Status:** Accepted (with implementation-time verification required)
+**Status:** Superseded — 引擎迁移至 Godot 4 (2026-04-25) (with implementation-time verification required)
 **Date:** 2026-04-25
 **Author:** Claude Code (technical-director)
 

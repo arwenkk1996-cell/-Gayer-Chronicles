@@ -1,6 +1,6 @@
 # ADR-003: Memory Fragment Level Loading — Level Instance via ULevelStreamingDynamic
 
-**Status:** Accepted
+**Status:** Superseded — 引擎迁移至 Godot 4 (2026-04-25)
 **Date:** 2026-04-25
 **Author:** Claude Code (technical-director)
 

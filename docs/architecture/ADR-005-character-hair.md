@@ -1,6 +1,6 @@
 # ADR-005: Gaia Hair Rendering — Hair Cards with Groom Upgrade Path
 
-**Status:** Accepted
+**Status:** Superseded — 引擎迁移至 Godot 4 (2026-04-25)
 **Date:** 2026-04-25
 **Author:** Claude Code (technical-director)
 

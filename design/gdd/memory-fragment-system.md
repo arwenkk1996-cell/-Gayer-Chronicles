@@ -128,6 +128,12 @@
 | 返回过渡动画时长 | 2.0 秒 | 1.0–3.0 秒 | 返回现实的"落地感"；略短于进入，强调返回的突然性 |
 | 世界状态变化延迟 | 0.5 秒（过渡动画结束后） | 0–1.5 秒 | 让玩家先看到原始场景，再看到变化，强化对比感 |
 
+### Production Notes
+
+**Fragment scene stream-in constraint (console target):** Fragment scenes must stream in within **1.0 seconds** (from `LoadLevelInstanceByReference()` call to level fully loaded) on the 4 GB VRAM console target hardware profile. Exceeding this budget causes the hold-at-apex phase of the transition animation to freeze visibly — the dissolve pauses mid-frame while the engine waits for the level, breaking the illusion entirely. Size fragment level assets accordingly and validate with the console hardware profile during integration.
+
+*Source: `prototypes/memory-fragment-transition/REPORT.md`, Lessons Learned #3.*
+
 ## Visual/Audio Requirements
 
 - **进入过渡**：颜色饱和度渐降至目标时代色调，轻微模糊扩散，最终帧短暂完全白/黑（由目标时代决定）→ 淡入碎片场景。音效：低频共鸣渐起，现实声消失，碎片时代的环境声淡入。
@@ -158,6 +164,8 @@
 - **GIVEN** 碎片关卡加载失败，**THEN** 系统回到 `Idle`，叙事状态机无写入，视觉回到现实，HUD 显示错误提示。
 
 - **GIVEN** 系统已处于 `Transitioning_In` 状态时第二个文物触发，**THEN** 第二次调用静默失败，无额外动画或状态变化。
+
+- **GIVEN** 碎片触发在控制台目标硬件配置上运行，**THEN** 从 `LoadLevelInstanceByReference()` 调用到 `OnLevelLoaded()` 完成的碎片场景加载时间 ≤ 1.0 秒。(Fragment scene load time from `LoadLevelInstanceByReference()` call to `OnLevelLoaded()` ≤ 1.0s on the console target hardware profile.)
 
 ## Open Questions
 
